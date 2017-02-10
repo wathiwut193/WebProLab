@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Grid System</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            font-family: RSU;
+            font-size: 18px;
+            margin: 2px 2px 2px 2px;
+            background-color: 228, 241, 254;
+        }
+        /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+        
+        .row.content {
+            height: 1500px
+        }
+        /* Set gray background color and 100% height */
+        
+        .sidenav {
+            background-color: #F5F5F5;
+            height: 100%;
+        }
+        /* Set black background color, white text and some padding */
+        
+        footer {
+            background-color: #555;
+            color: white;
+            padding: 15px;
+        }
+        /* On small screens, set height to 'auto' for sidenav and grid */
+        
+        @media screen and (max-width: 767px) {
+            .sidenav {
+                height: auto;
+                padding: 15px;
+            }
+            .row.content {
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row content">
+            <div class="col-sm-3 sidenav">
+                <h1>Wathiwut's Blog</h1>
+                <center>
+                    <img src="Profile.jpg" height="200px" width="200px">
+                </center>
+                <br>
+                <br>
+
+                <ul class="nav nav-pills nav-stacked">
+                    <li class="active"><a href="lab03.html">Home</a></li>
+                    <li><a href="grid.html">GridSystem</a></li>
+                    <li><a href="form.html">HowtoForm</a></li>
+                </ul><br>
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search Blog..">
+                    <span class="input-group-btn">
+          <button class="btn btn-default" type="button">
+            <span class="glyphicon glyphicon-search"></span>
+                    </button>
+                    </span>
+                </div>
+            </div>
+
+            <div class="col-sm-9">
+                <h4><small>RECENT POSTS</small></h4>
+                <hr>
+                <h2> การใช้งาน Form </h2>
+                <h5><span class="glyphicon glyphicon-time"></span> Post by Jane Dane, Sep 27, 2015.</h5>
+                <h5><span class="label label-danger">Grid System</span> <span class="label label-primary">Ipsum</span></h5><br>
+                <p>วันนี้เราจะมาพูดถึงเรื่องการใช้งาน Form ของ Bootstrap ซึ่งก็ไม่ได้มีอะไรซับซ้อนมากมายครับ โดยเราแค่เรียกใช้ class “form-control” ใน textbox combo-box หรือ textarea แค่นี้ input ต่างๆ ก็แสดงผลในรูปแบบของ bootstrap ครับ โดย input ต่างๆ ที่มีการเรียกใช้
+                    class “form-control” จะมีลักษณะที่โค้งมน และมีความกว้าง 100% ใน tag ที่ input นี้อยู่ครับ เรามาดู From แบบแรกกันเลยครับ Inline form ก็ตามชื่อครับ เป็น from ที่มีพวก input อยู่ในแถวเดียวกัน ซึ่งหน้าตาก็จะประมาณนี้ครับ
+                    <br>
+                    <img src="001.png" height="80px" width="1000px">
+                    <br>
+                    <br>
+                    <h4>Horizontal form</h4>
+                    <br> ตัวนี้จะเป็นฟอร์มตามแนวนอนครับ โดย input ต่างๆ ปกติ จะอยู่คนละแถวกันครับ จะมีอยู่แถวเดียวกันก็เพียง label เท่านั้น ซึ่ง Horizontal form นั้นมีการนำ grid system ที่เราได้กล่าวไปแล้วใน บทความที่แล้ว เรื่อง contanier และ grid ครับ
+                    ซึ่งหน้าตาของ Horizontal form ก็จะประมาณนี้ครับ
+                    <img src="002.png" height="80px" width="1000px">
+                </p>
+                <br><br>
+                <a href="http://nokhookstudio.com/bootstrap-forms/">http://nokhookstudio.com/bootstrap-forms/</a>
+                <h4><small>RECENT POSTS</small></h4>
+                <hr>
+
+                <h4>Leave a Comment:</h4>
+                <form role="form">
+                    <div class="form-group">
+                        <textarea class="form-control" rows="3" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-success">Submit</button>
+                </form>
+                <br><br>
+
+                <p><span class="badge">2</span> Comments:</p><br>
+
+                <div class="row">
+                    <div class="col-sm-2 text-center">
+                        <img src="bot.gif" class="img-circle" height="65" width="65" alt="Avatar">
+                    </div>
+                    <div class="col-sm-10">
+                        <h4>Anja <small>Sep 29, 2015, 9:12 PM</small></h4>
+                        <p>Keep up the GREAT work! I am cheering for you!! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <br>
+                    </div>
+                    <div class="col-sm-2 text-center">
+                        <img src="cat.gif" class="img-circle" height="65" width="65" alt="Avatar">
+                    </div>
+                    <div class="col-sm-10">
+                        <h4>John Row <small>Sep 25, 2015, 8:25 PM</small></h4>
+                        <p>I am so happy for you man! Finally. I am looking forward to read about your trendy life. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <br>
+                        <p><span class="badge">1</span> Comment:</p><br>
+                        <div class="row">
+                            <div class="col-sm-2 text-center">
+                                <img src="What.gif" class="img-circle" height="65" width="65" alt="Avatar">
+                            </div>
+                            <div class="col-xs-10">
+                                <h4>Nested Bro <small>Sep 25, 2015, 8:28 PM</small></h4>
+                                <p>Me too! WOW!</p>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="container-fluid">
+        <p>Wathiwut Kongjan</p>
+    </footer>
+
+</body>
+
+</html>

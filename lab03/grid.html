@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Grid System</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            font-family: RSU;
+            font-size: 18px;
+            margin: 2px 2px 2px 2px;
+            background-color: 228, 241, 254;
+        }
+        /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+        
+        .row.content {
+            height: 1500px
+        }
+        /* Set gray background color and 100% height */
+        
+        .sidenav {
+            background-color: #F5F5F5;
+            height: 100%;
+        }
+        /* Set black background color, white text and some padding */
+        
+        footer {
+            background-color: #555;
+            color: white;
+            padding: 15px;
+        }
+        /* On small screens, set height to 'auto' for sidenav and grid */
+        
+        @media screen and (max-width: 767px) {
+            .sidenav {
+                height: auto;
+                padding: 15px;
+            }
+            .row.content {
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row content">
+            <div class="col-sm-3 sidenav">
+                <h1>Wathiwut's Blog</h1>
+                <center>
+                    <img src="Profile.jpg" height="200px" width="200px">
+                </center>
+                <br>
+                <br>
+
+                <ul class="nav nav-pills nav-stacked">
+                    <li class="active"><a href="lab03.html">Home</a></li>
+                    <li><a href="grid.html">GridSystem</a></li>
+                    <li><a href="form.html">HowtoForm</a></li>
+                </ul><br>
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search Blog..">
+                    <span class="input-group-btn">
+          <button class="btn btn-default" type="button">
+            <span class="glyphicon glyphicon-search"></span>
+                    </button>
+                    </span>
+                </div>
+            </div>
+
+            <div class="col-sm-9">
+                <h4><small>RECENT POSTS</small></h4>
+                <hr>
+                <h2> Grid คือ..?</h2>
+                <h5><span class="glyphicon glyphicon-time"></span> Post by Jane Dane, Sep 27, 2015.</h5>
+                <h5><span class="label label-danger">Grid System</span> <span class="label label-primary">Ipsum</span></h5><br>
+                <p>พูดกันภาษาคนอ่านก็คือ ตัวช่วยจัดการทำให้เราออกแบบเว็บไซต์ได้อย่างมีขอบเขตชัดเจน แบ่งเส้น แบ่งขอบ แบ่งสัดส่วน ทำให้เรามองเห็นความเรียบร้อย ส่วนนี้จะไม่ชนกับส่วนนั้น ส่วนนั้นมีพื้นที่กว้างสุดแค่เท่านี้ เหมือนกล่องสี่เหลี่ยมวางเป็น Block
+                    เรียงกันไปเรื่อยๆเป็น Column ข้างในก็มีข้อมูล มีกราฟิคอยู่ในกล่อง เมื่อกล่องหลายๆกล่องมาวางเรียงประกอบกัน ก็จะเกิดเป็นเว็บที่เป็นระเบียบ ทำงานได้ง่าย ดีไซน์ยังไง ก็ขึ้นเลเอาท์ได้อย่างนั้น Bootstrap นั้นใช้ Grid System เข้ามาจัดการการแสดงผลเนื้อหาให้มีความเหมาะสมกับขนาดหน้าจอของอุปกรณ์ต่างๆ
+                    เหล่านั้นโดยในแต่ละแถวของ Grid System แบ่งออกเป็นทั้งหมด 12 คอลัมน์
+                    <br>
+                    <img src="12colum.png" height="60px" width="1000px">
+                    <br> Bootstrap grid system มีการแสดงผลแบบ responsive และ column จะมีการจัดใหม่อัตโนมัติขึ้นอยู่กับขนาดของหน้าจอ
+                    <br>
+                    <h4>Grid Classes</h4>
+
+                    Bootstrap grid system มีทั้งหมด 4 คลาสด้วยกัน คือ xs (สำหรับ phones) sm (สำหรับ tablets) md (สำหรับ desktops) lg (สำหรับ larger desktops) คลาสข้างบนนี้สามารถใช้ร่วมกันเพื่อสร้างหน้าจอที่ยืดหยุ่นได้
+                </p>
+                <br><br>
+
+                <h4><small>RECENT POSTS</small></h4>
+                <hr>
+
+                <h4>Leave a Comment:</h4>
+                <form role="form">
+                    <div class="form-group">
+                        <textarea class="form-control" rows="3" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-success">Submit</button>
+                </form>
+                <br><br>
+
+                <p><span class="badge">2</span> Comments:</p><br>
+
+                <div class="row">
+                    <div class="col-sm-2 text-center">
+                        <img src="bot.gif" class="img-circle" height="65" width="65" alt="Avatar">
+                    </div>
+                    <div class="col-sm-10">
+                        <h4>Anja <small>Sep 29, 2015, 9:12 PM</small></h4>
+                        <p>Keep up the GREAT work! I am cheering for you!! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <br>
+                    </div>
+                    <div class="col-sm-2 text-center">
+                        <img src="cat.gif" class="img-circle" height="65" width="65" alt="Avatar">
+                    </div>
+                    <div class="col-sm-10">
+                        <h4>John Row <small>Sep 25, 2015, 8:25 PM</small></h4>
+                        <p>I am so happy for you man! Finally. I am looking forward to read about your trendy life. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <br>
+                        <p><span class="badge">1</span> Comment:</p><br>
+                        <div class="row">
+                            <div class="col-sm-2 text-center">
+                                <img src="What.gif" class="img-circle" height="65" width="65" alt="Avatar">
+                            </div>
+                            <div class="col-xs-10">
+                                <h4>Nested Bro <small>Sep 25, 2015, 8:28 PM</small></h4>
+                                <p>Me too! WOW!</p>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="container-fluid">
+        <p>Wathiwut Kongjan</p>
+    </footer>
+
+</body>
+
+</html>
