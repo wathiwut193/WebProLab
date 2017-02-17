@@ -2,6 +2,60 @@
 <html>
 
 <head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="refresh" content=\ "0; URL=webboard_url">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        .panel-primary {
+            border-color: #000000;
+        }
+        
+        .panel-primary>.panel-heading {
+            color: #fff;
+            background-color: black;
+            border-color: black;
+        }
+        
+        body {
+            font-family: 'rsu', cursive;
+            font-size: 24px;
+            font-weight: 200;
+            margin-bottom: 30px;
+            color: #000;
+        }
+        /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+        
+        .row.content {
+            height: 1500px
+        }
+        /* Set gray background color and 100% height */
+        
+        .sidenav {
+            background-color: #ffffff;
+            height: 100%;
+        }
+        /* Set black background color, white text and some padding */
+        
+        footer {
+            background-color: #555;
+            color: white;
+            padding: 15px;
+        }
+        /* On small screens, set height to 'auto' for sidenav and grid */
+        
+        @media screen and (max-width: 767px) {
+            .sidenav {
+                height: auto;
+                padding: 15px;
+            }
+            .row.content {
+                height: auto;
+            }
+        }
+    </style>
     <title>
         Image rollover
     </title>
@@ -28,12 +82,55 @@
 </head>
 
 <body>
-    <p>
-        <a href="http:///www.google.co.th" onMouseOver="heightlightdocs()" onMouseOut="unheightlightdocs()">
-            <img src="gg_gray.png" name=docs height=25 width=25 border=0>
-        </a>
+    <div class="container-fluid">
+        <div class="row content">
+            <div class="col-sm-3 sidenav">
+                <h4>Wathiwut Kongjan</h4>
+                <ul class="nav nav-pills nav-stacked">
+                    <li><a href="lab04.html">Home</a></li>
 
-    </p>
+                </ul><br>
+
+            </div>
+            <br>
+
+
+            <center>
+
+                <align="right">
+                    <F2>Js08.html</F2>
+                    </align>
+
+                    <div class="col-sm-6">
+                        <h2>รูปภาพ</h2>
+                        <a href="Picture/js8pic.PNG"><img src="Picture/js8pic.PNG" width="790px" height="560px" hspace="8"></a>
+                        <!--<span class="glyphicon glyphicon-globe logo slideanim"></span>-->
+                    </div>
+                    <div class="col-sm-6">
+                        <h2>คำอธิบาย</h2>
+                        <p class="text-left">5: สร้าง function highlightdocs<br> ตรวจสอบ document.images<br> ให้ document.images ที่ชื่อ docs มีที่อยู่ที่ docsOn.src<br> สร้าง function unhighlightdocs<br> ตรวจสอบ document.images<br> ให้ document.images ที่ชื่อ docs มีที่อยู่ที่
+                            docsOff.src
+                            <br> ตรวจสอบ document.images<br> สร้าง docsOn เป็น Object Image<br> ให้ docsOn.src อยู่ที่ img/gg_color.png<br> สร้าง docsOff เป็น Object Image<br> ให้ docsOff.src อยู่ที่ img/gg_color.png<br> ทำให้รูปภาพสามารถ link ไปที่ www.google.com
+                            เราต้องการ onMouseClick ทำให้รูปภาพเป็นสีขณะที่ cursor ชี้ไปยังรูปภาพนั้น onMouseOut คือในขณะที่ไม่มี cursor อยู่ก็ให้เอาสีออก โดยใช้ภาพ gg_black.png เป็นรูปตั้งต้น ให้มีขนาด 25px*25px</p>
+
+
+                    </div>
+                    <div class="col-sm-6">
+                        <h2>ผลลัพธ์</h2>
+
+                        <p>
+                            <a href="http:///www.google.co.th" onMouseOver="heightlightdocs()" onMouseOut="unheightlightdocs()">
+                                <img src="Picture/clickme.png" name=docs height=100 width=100 border=0>
+                            </a>
+
+                        </p>
+
+                    </div>
+                    <!-- push content in here-->
+        </div>
+
+    </div>
+    </center>
 
 </body>
 

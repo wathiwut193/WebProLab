@@ -59,16 +59,52 @@
 </head>
 
 <body>
-    <h1>Another Example of javascript</h1>
-    <script language="javascript">
-        document.write("<H1>Factorials Table</H1>")
-        for (i = 1, fact = 1; i < 10; i++, fact = fact * i) {
-            document.write(i + "i =" + fact);
-            document.write("<br>");
+    <div class="container-fluid">
+        <div class="row content">
+            <div class="col-sm-3 sidenav">
+                <h4>Wathiwut Kongjan</h4>
+                <ul class="nav nav-pills nav-stacked">
+                    <li><a href="lab04.html">Home</a></li>
+
+                </ul><br>
+
+            </div>
+            <br>
 
 
-        }
-    </script>
+            <center>
+
+                <center>
+                    <F2>Js02.html</F2>
+                </center>
+
+                <div class="col-sm-6">
+                    <h2>รูปภาพ</h2>
+                    <a href="Picture/js2pic.PNG"><img src="Picture/js2pic.PNG" width="790px" height="560px" hspace="8"></a>
+
+                </div>
+                <div class="col-sm-6">
+                    <h2>คำอธิบาย</h2>
+                    <p> พิมพ์สตริง &lt;H1&gt;Factorial Table&lt;/H1&gt;<br> วนลูป 9 รอบ และกำหนดค่าของตัวแปร fact = fact * i <br>พิมพ์ค่าของตัวแปร i ต่อด้วย ! = และค่าของตัวแปร fact <br> พิมพ์ข้อความ &lt;BR&gt;</p>
+                </div>
+                <div class=col-sm-6>
+                    <h1>ผลลัพธ์</h1>
+                    <h2>Another Example of javascript</h2>
+                    <script language="javascript">
+                        document.write("<H1>Factorials Table</H1>")
+                        for (i = 1, fact = 1; i < 10; i++, fact = fact * i) {
+                            document.write(i + "i =" + fact);
+                            document.write("<br>");
+
+
+                        }
+                    </script>
+                </div>
+
+        </div>
+        <!-- push content in here-->
+    </div>
+    </center>
 </body>
 
 </html>

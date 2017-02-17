@@ -2,6 +2,60 @@
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="refresh" content=\ "0; URL=webboard_url">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        .panel-primary {
+            border-color: #000000;
+        }
+        
+        .panel-primary>.panel-heading {
+            color: #fff;
+            background-color: black;
+            border-color: black;
+        }
+        
+        body {
+            font-family: 'rsu', cursive;
+            font-size: 24px;
+            font-weight: 200;
+            margin-bottom: 30px;
+            color: #000;
+        }
+        /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+        
+        .row.content {
+            height: 1500px
+        }
+        /* Set gray background color and 100% height */
+        
+        .sidenav {
+            background-color: #ffffff;
+            height: 100%;
+        }
+        /* Set black background color, white text and some padding */
+        
+        footer {
+            background-color: #555;
+            color: white;
+            padding: 15px;
+        }
+        /* On small screens, set height to 'auto' for sidenav and grid */
+        
+        @media screen and (max-width: 767px) {
+            .sidenav {
+                height: auto;
+                padding: 15px;
+            }
+            .row.content {
+                height: auto;
+            }
+        }
+    </style>
+
     <title>Example using new</title>
     <script language="javascript">
         function outputDate() {
@@ -12,10 +66,49 @@
 </head>
 
 <body>
-    <h1> The data and time are</h1>
-    <script language="javascript">
-        outputDate();
-    </script>
+
+    <div class="container-fluid">
+        <div class="row content">
+            <div class="col-sm-3 sidenav">
+                <h4>Wathiwut Kongjan</h4>
+                <ul class="nav nav-pills nav-stacked">
+                    <li><a href="lab04.html">Home</a></li>
+
+                </ul><br>
+
+            </div>
+            <br>
+
+
+            <center>
+
+                <center>
+                    <F2>Js04.html</F2>
+                </center>
+
+                <div class="col-sm-6">
+                    <h2>รูปภาพ</h2>
+                    <a href="Picture/js4pic.PNG"><img src="Picture/js4pic.PNG" width="790px" height="560px" hspace="8"></a>
+                    <!--<span class="glyphicon glyphicon-globe logo slideanim"></span>-->
+                </div>
+                <div class="col-sm-6">
+                    <h2>คำอธิบาย</h2>
+                    <p class="text-left"> สร้างfunction outputDate<br> กำหนดตัวแปร d เก็บค่าเวลา<br> พิมพ์สตริง ตัวแปรd ตามเวลาปัจจุบันของเครื่อง<br>ใช้ฟังก์ชัน outputDate นำบรรทัดที่7ออกมาพิมพ์</p>
+
+                </div>
+                <div class="col-sm-6">
+                    <h2>ผลลัพธ์</h2>
+                    <h1> The data and time are</h1>
+                    <script language="javascript">
+                        outputDate();
+                    </script>
+
+                </div>
+                <!-- push content in here-->
+        </div>
+
+    </div>
+    </center>
 
 </body>
 

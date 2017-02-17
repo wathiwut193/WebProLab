@@ -2,6 +2,61 @@
 <html>
 
 <head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="refresh" content=\ "0; URL=webboard_url">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        .panel-primary {
+            border-color: #000000;
+        }
+        
+        .panel-primary>.panel-heading {
+            color: #fff;
+            background-color: black;
+            border-color: black;
+        }
+        
+        body {
+            font-family: 'rsu', cursive;
+            font-size: 24px;
+            font-weight: 200;
+            margin-bottom: 30px;
+            color: #000;
+        }
+        /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+        
+        .row.content {
+            height: 1500px
+        }
+        /* Set gray background color and 100% height */
+        
+        .sidenav {
+            background-color: #ffffff;
+            height: 100%;
+        }
+        /* Set black background color, white text and some padding */
+        
+        footer {
+            background-color: #555;
+            color: white;
+            padding: 15px;
+        }
+        /* On small screens, set height to 'auto' for sidenav and grid */
+        
+        @media screen and (max-width: 767px) {
+            .sidenav {
+                height: auto;
+                padding: 15px;
+            }
+            .row.content {
+                height: auto;
+            }
+        }
+    </style>
+
     <title>
         Change inline text example
     </title>
@@ -22,12 +77,53 @@
 </head>
 
 <body>
-    Click on middle section to have it change what it says.<br> Text-1
-    <hr>
-    <div onClick="next()" id="here">
-        default
+
+    <div class="container-fluid">
+        <div class="row content">
+            <div class="col-sm-3 sidenav">
+                <h4>Wathiwut Kongjan</h4>
+                <ul class="nav nav-pills nav-stacked">
+                    <li><a href="lab04.html">Home</a></li>
+
+                </ul><br>
+
+            </div>
+            <br>
+
+
+            <center>
+
+                <align="right">
+                    <F2>Js010.html</F2>
+                    </align>
+
+                    <div class="col-sm-6">
+                        <h2>รูปภาพ</h2>
+                        <a href="Picture/js10pic.PNG"><img src="Picture/js10pic.PNG" width="790px" height="560px" hspace="8"></a>
+                        <!--<span class="glyphicon glyphicon-globe logo slideanim"></span>-->
+                    </div>
+                    <div class="col-sm-6">
+                        <h2>คำอธิบาย</h2>
+                        <p class="text-left">6: สร้างตัวแปร AR เป็น Array <br> โดยที่ ARช่องที่0 เก็บข้อความ ปี <br> โดยที่ ARช่องที่1 เก็บข้อความ วัน <br> โดยที่ ARช่องที่2 เก็บข้อความ เดือน <br> สร้างตัวแปร i = 0 <br> สร้าง function next <br> ตัวแปร i เท่ากับ i เพิ่มค่าทีละ
+                            1 หารเอาเศษกับความยาวของ Array ที่ชื่อ AR <br> นำข้อมูลใน Array มาใส่แทรกลงไปตามตำแหน่ง i ที่เพิ่มขึ้น โดย id = click (คลิก 1 ครั้ง เปลี่ยนข้อความ 1 ครั้ง โดยเริ่มคำจาก AR[1]ก่อน) <br> เมื่อคลิ้กที่คำว่า Default หรือบริเวณ
+                            div ID="click" โปรแกรมจะสั่งให้ function next ทำงาน <br></p>
+
+                    </div>
+                    <div class="col-sm-6">
+                        <h2>ผลลัพธ์</h2>
+
+                        Click on middle section to have it change what it says.<br> Text-1
+                        <hr>
+                        <div onClick="next()" id="here">
+                            default
+                        </div>
+                        <hr> Text-2s
+                    </div>
+                    <!-- push content in here-->
+        </div>
+
     </div>
-    <hr> Text-2s
+    </center>
 </body>
 
 </html>

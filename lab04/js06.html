@@ -3,16 +3,112 @@
 
 <head>
     <title>Check Browser</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="refresh" content=\ "0; URL=webboard_url">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        .panel-primary {
+            border-color: #000000;
+        }
+        
+        .panel-primary>.panel-heading {
+            color: #fff;
+            background-color: black;
+            border-color: black;
+        }
+        
+        body {
+            font-family: 'rsu', cursive;
+            font-size: 24px;
+            font-weight: 200;
+            margin-bottom: 30px;
+            color: #000;
+        }
+        /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+        
+        .row.content {
+            height: 1500px
+        }
+        /* Set gray background color and 100% height */
+        
+        .sidenav {
+            background-color: #ffffff;
+            height: 100%;
+        }
+        /* Set black background color, white text and some padding */
+        
+        footer {
+            background-color: #555;
+            color: white;
+            padding: 15px;
+        }
+        /* On small screens, set height to 'auto' for sidenav and grid */
+        
+        @media screen and (max-width: 767px) {
+            .sidenav {
+                height: auto;
+                padding: 15px;
+            }
+            .row.content {
+                height: auto;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <script language=JavaScript>
-        document.write("<br> this Browser is" + navigator.appName);
-        document.write("<br> This version " + navigator.appVersion);
-        if (parseFloat(navigator.appVersion) >= 4) {
-            document.write("<br> You have an up-to-date  Browser");
-        }
-    </script>
+
+    <div class="container-fluid">
+        <div class="row content">
+            <div class="col-sm-3 sidenav">
+                <h4>Wathiwut Kongjan</h4>
+                <ul class="nav nav-pills nav-stacked">
+                    <li><a href="lab04.html">Home</a></li>
+
+                </ul><br>
+
+            </div>
+            <br>
+
+
+            <center>
+
+                <align="right">
+                    <F2>Js06.html</F2>
+                    </align>
+
+                    <div class="col-sm-6">
+                        <h2>รูปภาพ</h2>
+                        <a href="Picture/js6pic.PNG"><img src="Picture/js6pic.PNG" width="790px" height="560px" hspace="8"></a>
+                        <!--<span class="glyphicon glyphicon-globe logo slideanim"></span>-->
+                    </div>
+                    <div class="col-sm-6">
+                        <h2>คำอธิบาย</h2>
+                        <p class="text-left"> พิมพ์สตริง &lt;br&gt;This browser is ตามด้วยชื่อ browser <br> พิมพ์สตริง &lt;br&gt; Version ตามด้วย version ของ browser <br> ถ้า parseFloat ตัดตัวหนังสือ เหลือแค่ตัวเลขและเทียบทศนิยมด้วย มากกว่าเท่ากับ 4 <br> พิมพ์สตริง &lt;br&gt;
+                            You have an up-to-date browser <br>
+                        </p>
+
+                    </div>
+                    <div class="col-sm-6">
+                        <h2>ผลลัพธ์</h2>
+
+                        <script language=JavaScript>
+                            document.write("<br> this Browser is" + navigator.appName);
+                            document.write("<br> This version " + navigator.appVersion);
+                            if (parseFloat(navigator.appVersion) >= 4) {
+                                document.write("<br> You have an up-to-date  Browser");
+                            }
+                        </script>
+
+                    </div>
+                    <!-- push content in here-->
+        </div>
+
+    </div>
+    </center>
+
 </body>
 
 </html>

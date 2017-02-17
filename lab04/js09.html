@@ -2,6 +2,61 @@
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="refresh" content=\ "0; URL=webboard_url">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        .panel-primary {
+            border-color: #000000;
+        }
+        
+        .panel-primary>.panel-heading {
+            color: #fff;
+            background-color: black;
+            border-color: black;
+        }
+        
+        body {
+            font-family: 'rsu', cursive;
+            font-size: 24px;
+            font-weight: 200;
+            margin-bottom: 30px;
+            color: #000;
+        }
+        /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+        
+        .row.content {
+            height: 1500px
+        }
+        /* Set gray background color and 100% height */
+        
+        .sidenav {
+            background-color: #ffffff;
+            height: 100%;
+        }
+        /* Set black background color, white text and some padding */
+        
+        footer {
+            background-color: #555;
+            color: white;
+            padding: 15px;
+        }
+        /* On small screens, set height to 'auto' for sidenav and grid */
+        
+        @media screen and (max-width: 767px) {
+            .sidenav {
+                height: auto;
+                padding: 15px;
+            }
+            .row.content {
+                height: auto;
+            }
+        }
+    </style>
+
+
     <title>
         Pull-down Menu with URL Revealed
     </title>
@@ -21,20 +76,59 @@
 </head>
 
 <body>
-    <h2>Pull-down Menu with URL Revealed </h2>
-    <center>
-        <form name=form1>
-            <select name=list onChange=showURL(this.form)>
+    <div class="container-fluid">
+        <div class="row content">
+            <div class="col-sm-3 sidenav">
+                <h4>Wathiwut Kongjan</h4>
+                <ul class="nav nav-pills nav-stacked">
+                    <li><a href="lab04.html">Home</a></li>
+
+                </ul><br>
+
+            </div>
+            <br>
+
+
+            <center>
+
+                <align="right">
+                    <F2>Js09.html</F2>
+                    </align>
+
+                    <div class="col-sm-6">
+                        <h2>รูปภาพ</h2>
+                        <a href="Picture/js9pic.PNG"><img src="Picture/js9pic.PNG" width="790px" height="560px" hspace="8"></a>
+                        <!--<span class="glyphicon glyphicon-globe logo slideanim"></span>-->
+                    </div>
+                    <div class="col-sm-6">
+                        <h2>คำอธิบาย</h2>
+                        <p class="text-left">5: สร้าง function doMoveBrowser รับค่า form เข้ามาในฟังก์ชัน<br> รับค่าลิ้งค์เว็บไซต์จากฟังก์ชัน getSelectedValue เพื่อที่จะลิ้งค์ไปยังเว็บไซต์นั้น<br> สร้าง function getSelectedValue<br> return ค่าของตัวเลือกที่ถูกเลือกใน form1<br>                            สร้าง function showURL รับค่า form เข้ามาในฟังก์ชัน<br> return ค่าของ URL ที่ถูกเลือกใน form1<br> สร้าง form ชื่อ form1<br> สร้าง seleted ขึ้นมาเพื่อระบุชนิดของ Form <br> option seleted value = 0 ตามด้วยข้อความ Where do you
+                            want to go today?<br> สร้าง dropdown เพื่อใช้เลือกว่าเราจะเข้า web ไหน?<br> สร้างกล่องเพื่อแสดง URL ของแต่ละชื่อใน dropdown</p>
+
+                    </div>
+                    <div class="col-sm-6">
+                        <h2>ผลลัพธ์</h2>
+
+                        <h2>Pull-down Menu with URL Revealed </h2>
+                        <center>
+                            <form name=form1>
+                                <select name=list onChange=showURL(this.form)>
                     <option selected value=0>Where do you want to go today?
                         <option value="http://www.google.co.th">Google
                         <option value="http://www.buu.ac.th">Buu University
                         <option value="http://www.informatics.buu.ac.th ">Faculty of informatics
 
                 </select>
-            <input type=button value=Go onClick=doMoveBrowser (this.form)>
-            <input type=reset value=Reset>
-            <input type=text name=TextBox size=40>
-        </form>
+                                <input type=button value=Go onClick=doMoveBrowser (this.form)>
+                                <input type=reset value=Reset>
+                                <input type=text name=TextBox size=40>
+                            </form>
+                        </center>
+                    </div>
+                    <!-- push content in here-->
+        </div>
+
+    </div>
     </center>
 </body>
 
