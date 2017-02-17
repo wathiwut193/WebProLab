@@ -1,0 +1,45 @@
+<!DOCTYPE>
+
+<html>
+
+<head>
+    <title> Example of alert, confirm, promt</tilte>
+        <script language="javascript">
+            function alertUser() {
+                alert("An alert box constains an exclamation mark");
+
+            }
+
+            function confirmUser() {
+                var msg = "\n please confirm  that you  want\n" + "to test another button ?";
+
+                if (comfirm(msg))
+
+                    doucument.write("<h2> You selected ok</h2>")
+                else
+                    doucumnet.write("<h2>You selected cancle</h2>")
+
+
+
+            }
+
+            function promptUser() {
+
+                name1 = prompt("What is your name?", "");
+                doucument.write("<h1>welcome to this page" + name1 + "</h1>")
+
+
+            }
+        </script>
+</head>
+
+<body>
+    welcome to is this page<br>
+    <form>
+        <input type=button value="Click here to test alert()" onclick="alertUser()"><br>
+        <input type=button value="Click here to test confirm()" onclick="confirmUser()"><br>
+        <input type="button" value="Click here to test prompt()" onclick="promptUser()">
+    </form>
+</body>
+
+</html>

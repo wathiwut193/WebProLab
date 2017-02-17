@@ -1,0 +1,33 @@
+<!DOCTYPE>
+<html>
+
+<head>
+    <title>
+        Change inline text example
+    </title>
+
+
+    <script language="javascript">
+        var AR = new Array();
+        AR[0] = "NewMassage 1";
+        AR[1] = "NewMassage 2";
+        AR[2] = "NewMassage 3";
+        var i = 0;
+
+        function next() {
+            i = (++i) % AR.length;
+            document.getElementById("here").innerHTML = AR[i];
+        }
+    </script>
+</head>
+
+<body>
+    Click on middle section to have it change what it says.<br> Text-1
+    <hr>
+    <div onClick="next()" id="here">
+        default
+    </div>
+    <hr> Text-2s
+</body>
+
+</html>

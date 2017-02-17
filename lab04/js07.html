@@ -1,0 +1,34 @@
+ !
+<!DOCTYPE>
+<html>
+
+<head>
+    <meta charset="utf-8">
+</head>
+
+<title>
+    re-direct based upon window size
+</title>
+
+<body>
+    <script language="javascript">
+        function windowHeight() {
+            if (document.body && document.body.clientHeight) { //test for IE
+                return document.body.clientHeight;
+            } else if (window.innerHeight) { //test for ns
+                return window.innerHeight;
+
+            } else {
+                return 0;
+            } //both tests have failed
+
+        }
+        if (windowHeight() >= 300) {
+            document.location = "Your html or http://";
+        } else {
+            document.location = "Your html or http://";
+        }
+    </script>
+</body>
+
+</html>

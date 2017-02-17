@@ -1,0 +1,40 @@
+<!DOCTYPE>
+<html>
+
+<head>
+    <title>
+        Image rollover
+    </title>
+
+    <script language="javascript">
+        function heightlightdocs() {
+            if (document.images) {
+                document.images["docs"].src = docsOn.src; {}
+
+                function unheightlightdocs() {
+                    if (document.images) {
+                        document.image["docs"].src = docsOff.src;
+                    }
+                }
+                if (document.images) {
+                    docsOn = new image();
+                    docsOn.src = "gg_color.png";
+                    docsOff = new image();
+                    docsOff.src = "gg_gray.png";
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <p>
+        <a href="http:///www.google.co.th" onMouseOver="heightlightdocs()" onMouseOut="unheightlightdocs()">
+            <img src="gg_gray.png" name=docs height=25 width=25 border=0>
+        </a>
+
+    </p>
+
+</body>
+
+</html>
