@@ -1,0 +1,131 @@
+
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css");
+/*======================================
+    GENERAL STYLES
+======================================= */
+
+body {
+   font-family:RSU;
+}
+.pad-top {
+    padding-top:30px;
+}
+.pad-bottom {
+     padding-bottom:30px;
+}
+/*======================================
+    CHAT BOX STYLES
+======================================= */
+
+.hr-clas {
+    border-top: 1px solid #4183D7;
+}
+
+.chat-box-main {
+    height:500px;
+    overflow:auto;
+}
+.chat-box-div {
+    border:2px solid #4183D7;
+    border-bottom:2px solid #4183D7;
+} 
+.chat-box-head {
+    padding: 10px 15px;
+border-bottom: 2px solid #4183D7;
+background-color: #4183D7;
+color: #E4F1FE;
+text-align: center;
+
+}
+
+.chat-box-left {
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    position: relative;
+    border: 1px solid #C5C5C5;
+    font-size:12px;
+}
+.chat-box-left:after {
+    top: 100%;
+    left: 10%;
+    border: solid transparent;
+    content: " ";
+    position: absolute;
+    border-top-color: #C5C5C5;
+    border-width: 15px;
+    margin-left: -15px;
+}
+
+.chat-box-name-left {
+    margin-top: 30px;
+    margin-left: 60px;
+    text-align:left;
+    color:#049E64;
+}
+    .chat-box-name-left img {
+        max-width:40px;
+        border: 2px solid #049E64;
+    }
+
+    .chat-box-right {
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    position: relative;
+    border: 1px solid #C5C5C5;
+    font-size:12px;
+}
+.chat-box-right:after {
+    top: 100%;
+    right: 10%;
+    border: solid transparent;
+    content: " ";
+    position: absolute;
+    border-top-color: #C5C5C5;
+    border-width: 15px;
+    margin-left: -15px;
+}
+
+.chat-box-name-right {
+    color: #354EA0;
+    margin-top: 30px;
+    margin-right: 60px;
+    text-align:right;
+}
+
+.chat-box-name-right img {
+        max-width:40px;
+        border: 2px solid #354EA0;
+    }
+.chat-box-footer {
+    background-color: #D8D8D8;
+padding: 10px;
+}
+    /*======================================
+  NEW  CHAT  STYLES
+======================================= */
+
+.chat-box-new {
+    height:500px;
+    overflow:auto;
+}
+.chat-box-new-div {
+    border:2px solid #4183D7;
+    border-bottom:2px solid #4183D7;
+} 
+
+.chat-box-new-head {
+    padding: 10px 15px;
+border-bottom: 2px solid #4183D7;
+background-color: #4183D7;
+color: #E4F1FE;
+text-align: center;
+
+}

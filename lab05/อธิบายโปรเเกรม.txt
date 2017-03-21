@@ -1,0 +1,6 @@
+หลักการทำงานของโปรเเกรม lab05.html สร้างฟังก์ชั่น loadXMLDoc ถ้ามี คำว่า XML เเสดงว่ามีการติดต่อกับ  Serve สร้างเงื่อนไขให้เครื่องเราตรวจสอบ  Browser ว่าใช้
+ฺBrowser อันไหน ด้วย Keyword ว่า window ถ้า Chrome FireFox ใช้ XMLHttpRequest ถ้า IE ใช้ ActiveXObject("Microsoft.XMLHTTP") จากนั้น
+onreadystatechange เมื่อส่งคำขอไปแม่ข่าย ต้องมีการทำบางการกระทำบนฐานของการตอบสนอง
+onreadystatechange event ได้รับการสับเปลี่ยนทุกครั้งเมื่อคุณสมบัติ readyState เปลี่ยนแปลง
+คุณสมบัติ readyState เก็บสถานะของ XMLHttpRequest  เมื่อคลิกปุ่ม button จะส่งให้คอมเราเปิดไฟล์ ็hello.txt เเล้วส่งไปเเม่ข่ายทำอย่างนี้ 4 ครั้ง 
+ให้เเสดง  Alert เเสดง 1 : 200 , 1:400 จากนั้นปรากฏคำว่า Hello World 

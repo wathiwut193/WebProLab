@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Theme Made By www.w3schools.com - No Copyright -->
+    <title>Bootstrap Theme Simply Me</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            font: 20px Montserrat, sans-serif;
+            line-height: 1.8;
+            color: #f5f6f7;
+        }
+        
+        p {
+            font-size: 16px;
+        }
+        
+        .margin {
+            margin-bottom: 45px;
+        }
+        
+        .bg-1 {
+            background-color: #1abc9c;
+            /* Green */
+            color: #ffffff;
+        }
+        
+        .bg-2 {
+            background-color: #474e5d;
+            /* Dark Blue */
+            color: #ffffff;
+        }
+        
+        .bg-3 {
+            background-color: #ffffff;
+            /* White */
+            color: #555555;
+        }
+        
+        .bg-4 {
+            background-color: #2f2f2f;
+            /* Black Gray */
+            color: #fff;
+        }
+        
+        .container-fluid {
+            padding-top: 70px;
+            padding-bottom: 70px;
+        }
+        
+        .navbar {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            border: 0;
+            border-radius: 0;
+            margin-bottom: 0;
+            font-size: 12px;
+            letter-spacing: 5px;
+        }
+        
+        .navbar-nav li a:hover {
+            color: #1abc9c !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- First Container -->
+    <div class="container-fluid bg-1 text-center">
+        <h1 class="margin">MiniProject</h1>
+        <h3 class="margin">CreateBy</h3>
+        <img src="Pic/Bew.jpg" class="img-responsive img-circle margin" style="display:inline" width="350" height="350">
+        <img src="Pic/Coach.jpg" class="img-responsive img-circle margin" style="display:inline" width="350" height="350">
+        <img src="Pic/Pluem.jpg" class="img-responsive img-circle margin" style="display:inline" width="350" height="350">
+
+    </div>
+
+    <!-- Second Container -->
+    <div class="container-fluid bg-2 text-center">
+        <h3 class="margin">Concept</h3>
+        <img src="Pic/Concept.jpg" class="img-rounded" alt="Cinque Terre" width="740" height="436">
+        <p>รับส่งข้อความด้วยเทคนิคการเขียน Ajax เพื่อลดการโหลดหน้าจอ เเละ เก็บข้อความไว้บนฐานข้อมูลตาราง Chat </p>
+
+    </div>
+
+    <!-- Thrid Container -->
+    <div class="container-fluid bg-4 text-center">
+        <h1 class="margin">DataBase</h1>
+        <h3 class="margin">ER Diagram</h3>
+
+        <img src="Pic/ER.PNG" class="img-rounded" alt="Cinque Terre" width="240" height="236">
+        <p>ใช้ตาราง chat ตารางเดียว</p>
+        <img src="Pic/Char.PNG" class="img-rounded" alt="Cinque Terre" width="750" height="50">
+
+        <p> 1. id เก็บหมายเลขผู้ใช้เป็นค่าชนิด int ตั้งค่าเป็น AI ให้รันอัตโนมัติ เป็น primary key <br> 2. Name ใช้เก็บชื่อคนเข้าใช้เป็นค่า varchar <br> 3. email ใช้ email คนเข้าใช้ใช้เป็นค่า varchar <br> 4. msg ใช้เก็บ massage ที่พูดคุยกันเป็น varchar <br>            5. status เก็บข้อมูลออฟไลน์ int <br> 6. Onchat เก็บสถานะออนไลน์ int <br> 7. date วันที่เวลาที่ใช้งาน timestamp <br>
+
+        </p>
+
+    </div>
+
+    <!-- 4 Container -->
+    <div class="container-fluid bg-2 text-center">
+        <h1 class="margin">How to do it</h1>
+        <br>
+        <br>
+
+
+        <h2 class="margin"> 1. Step one Create DB </h2>
+        <img src="Pic/DB.PNG" class="img-rounded" alt="Cinque Terre" width="240" height="236">
+        <p>
+            สร้างไฟล์ขึ้นมากตั้งชื่อว่า db.php ไฟล์นี้สร้างขึ้นมาเพื่อเชื่อมต่อฐานข้อมูล host ให้เป็น "localhost"
+        </p>
+        <br>
+        <br>
+        <h2 class="margin"> 2.Step two Create Main Class</h2>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <img src="Pic/chatpage21.PNG" class="img-responsive margin" style="width:100%" alt="Image">
+            </div>
+            <div class="col-sm-6">
+                <br>
+                <br>
+                <p>ผมต้องการให้เมื่อผู้ใช้พิมพ์ให้เริ่มกระบวนการทำงานคำสั่ง session_start()<br> สิ่งที่ผมต้องการ $_POST ส่งข้อมูลขึ้นไป คือ $name $email $comment<br> ให้ตัวเเปร $query เป็นการหยิบข้อมูลขึ้นมาจากตาราง chat ในฐานข้อมูล
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid bg-2 text-center">
+        <div class="row">
+            <div class="col-sm-6">
+                <img src="Pic/chatpage22.PNG" class="img-responsive margin" style="width:100%" alt="Image">
+            </div>
+            <div class="col-sm-6">
+                <p> เมื่อมีการกระทำที่ enter ในไฟล์ login.php $check ไว้เก็บค่า name,email,status,onChat ถ้า $check = 0 <br> ใหัเพิ่มข้อมูลเข้าใส่ตาราง chat ในฐานข้อมูลถ้า $check = 1 ให้เเก้ไขเป็นข้อมูลล่าสุดที่ส่งเข้า<br> ไปในตาราง chat ในฐานข้อมูลถ้ามีการกระทำที่
+                    sent ให้ส่งค่า $name , $email ,0,1,$comment<br> ไปที่ chat กรณีต่อมาถ้ามีการกระทำที่ logout ให้ส่งค่า(post) name , email ไปเเต่ให้ msg หรือ<br> ให้ส่งค่าเป็น null offline = 1 ให้ฐานข้อมูลจำไว้ header ให้เปลี่ยนหน้าจาก chatpage ไปที่
+                    login.php
+                    <br>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid bg-2 text-center">
+        <div class="row">
+            <div class="col-sm-6">
+                <img src="Pic/chatpage79.PNG" class="img-responsive margin" style="width:100%" alt="Image">
+            </div>
+            <div class="col-sm-6">
+                <p>
+                    เขียน script function chat_ajax ไว้ส่งข้อความเปิดด้วยไฟล์ chat.php ให้เเสดงค่า ชื่อเเละข้อความ<br> เเละ function user_ajax ไว้ส่งข้อมูลผู้ใช้ที่ออนไลน์เปิดไฟล์ userOnline.php ไว้สำหรับเเสดงคนออนไลน์อยู่
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid bg-2 text-center">
+        <div class="row">
+            <div class="col-sm-6">
+                <p>chat.php</p>
+                <img src="Pic/chat.PNG" class="img-responsive margin" style="width:100%" alt="Image">
+
+            </div>
+            <div class="col-sm-6">
+                <p>userOnline.php </p>
+                <img src="Pic/userOnline.PNG" class="img-responsive margin" style="width:100%" alt="Image">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid bg-2 text-center">
+        <h1 class="margin">3.Create Page for Login</h1>
+        <div class="row">
+            <div class="col-sm-12">
+                <p>สร้างไว้สำหรับเข้ารหัสเข้าใช้เว็บเเชทเเละส่งค่า ชื่่อ เเละ อีเมลมีการดักจับอีเมลที่ผิดพลาด</p><br>
+                <img src="Pic/Sample.PNG" class="img-responsive margin" style="width:100%" alt="Image">
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+    <!-- Container (Grid) -->
+    <div class="container-fluid bg-3 text-center">
+        <h3 class="margin">Visit Us</h3><br>
+        <div class="row">
+            <div class="col-sm-12">
+                <a href="http://angsila.cs.buu.ac.th/~58160193/887371/miniprj1/">
+                    <img src="Pic/SamplePage.PNG" class="img-responsive img-circle margin" style="display:inline" width="350" height="350">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="container-fluid bg-4 text-center">
+        <p>Bootstrap Theme Made By <a href="https://www.w3schools.com">www.w3schools.com</a></p>
+    </footer>
+
+</body>
+
+</html>
