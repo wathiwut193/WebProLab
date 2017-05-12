@@ -1,7 +1,7 @@
 <?php
 $con=mysqli_connect("localhost", "it58160638", "elementzeed", "it58160638"); 
 $id = $_GET['id'];
-$sql = "SELECT * FROM Appointment WHERE id = $id";
+$sql = "SELECT * FROM Appointment1 WHERE id = $id";
 $con->query("SET NAMES UTF8");
 $result = $con->query($sql);
 ?>
@@ -46,7 +46,6 @@ $result = $con->query($sql);
                 <label><h2>ชื่อคำสั่ง:</h2></label><input  type="text" class="form-control" maxlength="1000" ng-model="AP_name" required/>
                 <label><h2>ชื่อกรรมการ:</h2></label><input  type="text" class="form-control" ng-model="Com_name"/>
                 <label><h2>วันที่เริ่มคำสั่ง:</h2></label><input  type="text" id="datepicker" class="form-control" ng-model="start" required/>
-                <label><h2>วันที่สิ้นสุดคำสั่ง:</h2></label><input  type="text" id="datepicker2" class="form-control" ng-model="end"/>
                 <label><h2>link:</h2></label><input type="text" value="Link" class="form-control" disabled ng-model="link" maxlength="255"/>
                 <br>
                 <center><button class="btn btn-info btn-lg">Update</button>

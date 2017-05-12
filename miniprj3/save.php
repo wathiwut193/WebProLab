@@ -15,7 +15,7 @@ if ($_GET['end']=="") {
 $status = "Active";
 $link = $_GET['link'];
 
-$sql = "UPDATE Appointment SET 
+$sql = "UPDATE Appointment1 SET 
 			code = '$code' ,
 			AP_name = '$AP_name' ,
 			Com_name = '$Com_name' ,

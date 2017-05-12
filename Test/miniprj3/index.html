@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf8">
+  <title>Appointment</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+</head>
+<body ng-app="myApp" ng-controller="myCtrl" ng-init="displayData()">
+ 
+  <nav class="navbar navbar-inverse" style="background-color: #BEBEBE;">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" style="color:black;" href="#">Appointment</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        
+        <center><form class="navbar-form">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search" style="width: 400px" ng-model="search">
+            &nbsp;&nbsp;
+            <select class="form-control" ng-model="datestart" ng-change="yearData()">
+              <option ng-repeat="x in select" value="{{x}}">{{x}}</option>
+            </select>
+            <font color="white"><b>&nbsp; - &nbsp;</b></font>
+            <select class="form-control" ng-model="dateend" ng-change="yearData()">
+              <option ng-repeat="x in select" value="{{x}}">{{x}}</option>
+            </select>
+
+          </div>
+          
+          <button type="button" class="btn btn-info btn-sm navbar-right" onclick="location.href='insert_page.php'">
+             Create
+          </button>
+        </form></center>
+
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h3 align="center">Appointment</h3>
+    <br>
+    <div>
+      <table class="table table-responsive table-bordered">
+        <thead>
+          <tr class="success">
+            <th class="text-center" style="background-color: #BEBEBE;">Code</th>
+            <th class="text-center" style="background-color: #BEBEBE;">Appointment</th>
+            <th class="text-center" style="background-color: #BEBEBE;">Committee</th>
+            <th class="text-center" style="background-color: #BEBEBE;">Date Start</th>
+            <th class="text-center" style="background-color: #BEBEBE;">Date End</th>
+            <th class="text-center" style="background-color: #BEBEBE;">check</th>
+            <th class="text-center" style="background-color: #BEBEBE;">Status</th>
+            <th class="text-center" style="background-color: #BEBEBE;">Link</th>
+            <th colspan="2" class="text-center" style="background-color: #BEBEBE;"> Setting</th>
+          </tr>    
+        </thead>
+        <div ng-show="!names.length">
+        <tbody>
+          <tr ng-repeat="x in names | filter:search">
+            <td class="text-center">{{x.Code}}</td>
+            <td class="text-center"><a href="view.php?id={{x.id}}">{{x.nameAppoint}}</a></td>
+            <td class="text-center">{{x.committee}}</td>
+            <td class="text-center">{{x.datestart}}</td>
+            <td class="text-center">{{x.dateend}}</td>
+            <td class="text-center"><input type="checkbox" name="checkbox" ng-click="statusData(x.id)"></td>
+            <td class="text-center">
+              <span ng-if="x.status == 'A'"><input type="hidden" >Active</span>
+              <span ng-if="x.status == 'X'"><input type="hidden" >Expired</span>
+            </td>
+            
+
+             
+ 
+
+            <td class="text-center">
+             <a class="btn btn-success btn-sm" href="{{x.link}}"><span class="glyphicon glyphicon-file"></span> link</a>
+             </td>
+
+            <td colspan="1" class="text-center">
+              <button class="btn btn-warning btn-sm" ng-click="updateData(x.id)"><span class="glyphicon glyphicon-pencil"></span>Edit</button>
+            </td>
+            <td colspan="1" class="text-center">
+              <button class="btn btn-danger btn-sm" ng-click="removeData(x.id)"><span class="glyphicon glyphicon-trash"></span>Delete</button>
+            </td>
+        </tr>
+        </tbody>
+      </table>
+      <div ng-show="!(names |filter : search).length" style="text-align: center;">ไม่พบคำสั่ง</div>
+    </div>
+  </div>
+
+
+</body>
+<script src="function.js"></script>
+
+</html>

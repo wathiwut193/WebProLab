@@ -9,9 +9,7 @@
       $start = mysqli_real_escape_string($con,$data->start);
       $end = mysqli_real_escape_string($con,$data->end);
       $link = mysqli_real_escape_string($con,$data->link);
-      $query="insert into Appointment(code,AP_name,Com_name,start,end,status,link) values('$code','$AP_name','$Com_name','$start','$end','A','$link')";
-    
-
+      $query="insert into Appointment1(code,AP_name,Com_name,start,end,status,link) values('$code','$AP_name','$Com_name','$start','$end','A','$link')";
         if(mysqli_query($con,$query)){
           echo "Data Inserted";
         }

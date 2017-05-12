@@ -1,18 +1,12 @@
 var app = angular.module('myApp', []);
 app.controller('myCtrl', function($scope, $http) {
-    $scope.dataLoaded = false;
-    $http.get("getall.php").success(function(response) {
-        $scope.dataLoaded = true;
-        $scope.names = response;
-
-    });
     $scope.insertData = function() {
         $http.post("insert.php", {
                 'code': $scope.code,
                 'AP_name': $scope.AP_name,
                 'Com_name': $scope.Com_name,
                 'start': $scope.start,
-                'end': $scope.end,
+                'end': $scope.endd,
                 'link': $scope.link
             })
             .then(function(data) {
@@ -32,6 +26,11 @@ app.controller('myCtrl', function($scope, $http) {
             document.location = "index.html";
         });
     }
+    $scope.statusData = function(id) {
+        $http.get("status.php?id=" + id).then(function(data) {
+            $scope.displayData();
+        });
+    }
     $scope.start = "1990";
     $scope.end = "2030";
     $scope.select = ["1990", "1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998", "1999", "2000",
@@ -47,8 +46,5 @@ app.controller('myCtrl', function($scope, $http) {
     }
     $scope.orderBy = function(order) {
         $scope.Order = order;
-    }
-    $scope.namesList = function() {
-        $http.get("getall.php?COM_name=<?php echo $echo $_GET['Com_name'];?>")
     }
 });

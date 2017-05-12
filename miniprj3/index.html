@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>Appointment(edit)</title>
+    <title>Appointment</title>
     <meta charset="UTF-8">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -39,19 +39,20 @@
                     <center>
                         <form class="navbar-form">
                             <a class="navbar-brand" style="color: white;" href="index.html">APPOINTMENT</a>
+                            <a class="navbar-brand" href="aboutus.html" style="color:white;"> | &nbsp;&nbsp;ABOUT US</a>
                             <div class="form-group">
-                                <select class="form-control" ng-change="time()" ng-model="start">
+                                <select class="form-control" ng-model="start" ng-change="time()">
                                 <option ng-repeat="x in select" value="{{x}}">{{x}}</option>
                                 </select>
                             </div>
                             <font color="white">-</font>
                             <div class="form-group">
-                                <select class="form-control" ng-change="time()" ng-model="end">
+                                <select class="form-control" ng-model="end" ng-change="time()"> 
                                 <option ng-repeat="x in select" value="{{x}}">{{x}}</option>
                                 </select>
                             </div>
                             <div class="form-group">
-                                <input type="text" ng-model="Search" placeholder="Search" style="width: 450px" ng-keyup="Complete(Search)">
+                                <input type="text" ng-model="Search" placeholder="Search" style="width: 450px">
                             </div>
                             <a href="insert.php" class="btn btn-info navbar-btn">New</a>
                         </form>
@@ -91,28 +92,24 @@
                 <th style="background-color: #192439;">
                     <font color="white">Delete</font>
                 </th>
-
                 <tr ng-repeat="x in names | filter : Search | orderBy : Order">
                     <td>{{ x.code }}</td>
                     <td>{{ x.AP_name }}</td>
                     <td>{{ x.Com_name }}</td>
                     <td>{{ x.start }}</td>
-                    <td><span ng-if="x.end == '0000-00-00'">- </span>
+                    <td><span ng-if="x.end == '0000-00-00'">-</span>
                         <span ng-if="x.end != '0000-00-00'">{{ x.end }}</span></td>
-                    <td> <span ng-if="x.status == 'A'">
-                            <input type="checkbox" ng-click="status(x.id)"  >
-                            Active
-                        </span>
-                        <span ng-if="x.status == 'X'">
-                            <input type="checkbox" ng-click="status(x.id)" checked >
-                            Expire
-                        </span></td>
+                    <td>
+                        <input type="checkbox" name="checkbox" ng-click="statusData(x.id)">
+                        <span ng-if="x.status == 'A'"><input type="hidden" >Active</span>
+                        <span ng-if="x.status == 'X'"><input type="hidden" >Expired</span>
+                    </td>
                     <td>{{ x.link }}</td>
                     <td><a href="edit.php?id={{x.id}}" class="btn btn-info btn-xs" ng-click="updateData()">Update</a></td>
                     <td><a href="delete.php?id={{x.id}}" class="btn btn-danger btn-xs" ng-click="deleteData()">Delete</a></td>
                 </tr>
             </table>
-            <div ng-show="!(names|filter : Search).length">
+            <div ng-show="!(names|filter:serchBox).length">
                 NO DATA IN DATABASE
             </div>
         </center>
