@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <script>
+        function loadXMLDoc() {
+            var xmlhttp;
+            if (window.XMLHttpRequest) {
+                xmlhttp = new XMLHttpRequest();
+
+            } else {
+                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange = function() {
+                alert(xmlhttp.readystate + " : " + xmlhttp.status);
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                    document.getElementById("mydiv").innerHTML = xmlhttp.reponseText;
+
+                }
+            }
+            xmlhttp.open("GET", "hello.txt", true);
+            xmlhttp.send();
+
+        }
+    </script>
+    <title>
+    </title>
+</head>
+
+<body>
+    <div id="mydiv">
+        <h2>
+            Let Ajax
+        </h2>
+        <button type="button" onclick="loadXMLDoc()">
+                
+            </button>
+
+    </div>
+</body>
+
+</html>
