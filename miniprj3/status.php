@@ -2,6 +2,7 @@
 $con=mysqli_connect("localhost","it58160638","elementzeed","it58160638");
 $con->query("SET NAMES UTF8");
 $id = $_GET['id'];
+$end = $_GET['end'];
 $finish = date('Y/m/d');
 
 $sql = "SELECT status FROM Appointment1 WHERE id=$id";
@@ -10,7 +11,7 @@ $row = $result->fetch_object();
 if($row->status == A){
 	$sql = "UPDATE Appointment1 SET end='$finish',status='X'WHERE id=$id";
 }else{
-	$sql = "UPDATE Appointment1 SET end='-',status='A'WHERE id=$id";
+	$sql = "UPDATE Appointment1 SET end='$end',status='A'WHERE id=$id";
 }
 $result = $con->query($sql);
 ?>

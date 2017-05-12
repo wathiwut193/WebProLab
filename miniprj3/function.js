@@ -6,7 +6,7 @@ app.controller('myCtrl', function($scope, $http) {
                 'AP_name': $scope.AP_name,
                 'Com_name': $scope.Com_name,
                 'start': $scope.start,
-                'end': $scope.endd,
+                'end': $scope.end,
                 'link': $scope.link
             })
             .then(function(data) {

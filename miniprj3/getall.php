@@ -14,10 +14,7 @@ if(isset($_GET['start']) && isset($_GET['end'])){
 $a = $_GET['start'];
 $b = $_GET['end'];
 if($a <= $b){
-  $sql = "SELECT *
-  FROM  Appointment1
-  WHERE (start >=  '$a' && end <= '$b')
-  || (end >= '$a' && end <= '$b') ";
+  $sql = "SELECT * FROM  Appointment1 WHERE (start >=  '$a' && end <= '$b') || (end >= '$a' && end <= '$b') ";
   $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     $rows = array();

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>lab03</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        .col-sm-9 {
+            font-size: 16px;
+        }
+        
+        .row.content {
+            height: 2170px;
+        }
+        
+        .left {
+            background: url(Img/Bg01.jpg) no-repeat center fixed;
+            height: 100%;
+        }
+        
+        body {
+            font-family: 'Kanit', sans-serif;
+        }
+        
+        .navbar {
+            margin-bottom: 0;
+            border-radius: 0;
+        }
+        
+        img {
+            width: 1000px;
+            height: 500px;
+        }
+        
+        footer {
+            background-color: #555;
+            color: white;
+            padding: 15px;
+        }
+        
+        @media screen and (max-width: 767px) {
+            .left {
+                height: auto;
+                padding: 15px;
+            }
+            .row.content {
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row content">
+            <div class="col-sm-3 left">
+                <center>
+                    <h4>Howto's Blog</h4>
+                </center>
+                <p><b>จัดทำโดย</b></p>
+                <p><b>นาย วาทิวุทธ คงจันทร์ 58160193</b></p>
+                <p><b>นาย สถิตย์ธรรม ทิมอุบล 58160197</b></p>
+                <p><b>นาย ธวัชชัย ปันนที 58160397</b></p>
+                <p><b>นาย สุประวิชย์ ปัดจังหรีด 58160436</b></p>
+                <p><b>นาย วารุณ ลาภศรีสวัสดิ์ 58160638</b></p>
+                <ul class="nav nav-pills nav-stacked">
+                    <li><a href="index.html">Appoitment</a></li>
+                </ul><br>
+            </div>
+            <div class="col-sm-9">
+                <h1>
+                    <center>TUTORIAL</center>
+                </h1>
+                <p>&emsp;&emsp;สร้างตารางไว้ 2 ตาราง ตารางแรกเก็บข้อมูลคำสั่ง ตารางที่ 2 เก็บชื่อ กรรมการ</p>
+
+                <br><br>
+                <img src="image/insert1.PNG">
+                <br><br>
+                <p>&emsp;&emsp;ตรงinsertข้อมูลภายใน myApp โดยทุกๆ input จะมี "ng-model" ของแต่ละตัวใช้ js ในการดึงข้อมูลไปยัง php บนหน้า insert.php แล้วจะ insertข้อมูลลง databsase</p>
+
+                <b>Inline form</b><br> &emsp;&emsp;เป็น from ที่มีพวก input อยู่ในแถวเดียวกัน ซึ่งหน้าตาก็จะประมาณนี้<br>
+
+
+
+                <form class="form-inline">
+
+                    <div class="form-group">
+
+                        <label class="sr-only" for="exampleInputEmail3">Email address</label>
+
+                        <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Enter email">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label class="sr-only" for="exampleInputPassword3">Password</label>
+
+                        <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
+
+                    </div>
+
+                    <div class="checkbox">
+
+                        <label>
+
+      <input type="checkbox"> Remember me
+
+    </label>
+
+                    </div>
+
+                    <button type="submit" class="btn btn-default">Sign in</button>
+
+                </form>
+
+
+
+                <br><br>ซึ่งเบื้องต้นก็นำ โค๊ดด้านล่างไปวางไว้ในหน้าที่มีการเรียกใช้งาน bootstrap อยู่แล้วก็สามารถใช้งานได้เลย<br>
+
+
+
+                <textarea class="form-control" rows="30" id="comment">
+
+                                   <form class="form-horizontal">
+
+                                        <div class="form-group">
+
+                                            <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+
+                                            <div class="col-sm-10">
+
+                                            <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="form-group">
+
+                                            <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+
+                                            <div class="col-sm-10">
+
+                                            <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="form-group">
+
+                                            <div class="col-sm-offset-2 col-sm-10">
+
+                                            <div class="checkbox">
+
+                                                <label>
+
+                                                <input type="checkbox"> Remember me
+
+                                                </label>
+
+                                            </div>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="form-group">
+
+                                            <div class="col-sm-offset-2 col-sm-10">
+
+                                            <button type="submit" class="btn btn-default">Sign in</button>
+
+                                            </div>
+
+                                        </div>
+
+                                    </form>
+
+                                </textarea><br>
+
+
+
+                <b>Horizontal form</b><br> &emsp;&emsp;ตัวนี้จะเป็นฟอร์มตามแนวนอน โดย input ต่างๆ ปกติ จะอยู่คนละแถวกัน จะมีอยู่แถวเดียวกันก็เพียง label เท่านั้น ซึ่ง Horizontal form นั้นมีการนำ grid system <br>ที่เราได้กล่าวไปแล้วใน บทความที่แล้ว เรื่อง
+                contanier และ grid ซึ่งหน้าตาของ Horizontal form ก็จะประมาณนี้ <br><br>
+
+                <form class="form-horizontal">
+
+                    <div class="form-group">
+
+                        <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+
+                        <div class="col-sm-10">
+
+                            <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+
+                        <div class="col-sm-10">
+
+                            <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <div class="col-sm-offset-2 col-sm-10">
+
+                            <div class="checkbox">
+
+                                <label>
+
+           <input type="checkbox"> Remember me
+
+           </label>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <div class="col-sm-offset-2 col-sm-10">
+
+                            <button type="submit" class="btn btn-default">Sign in</button>
+
+                        </div>
+
+                    </div>
+
+                </form><br><br> และโค๊ด HTML ที่ใช้ก็ คือ<br><br>
+
+                <textarea class="form-control" rows="30" id="comment">
+
+                                     <form class="form-horizontal">
+
+                                    <div class="form-group">
+
+                                        <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+
+                                        <div class="col-sm-10">
+
+                                        <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="form-group">
+
+                                        <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+
+                                        <div class="col-sm-10">
+
+                                        <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="form-group">
+
+                                        <div class="col-sm-offset-2 col-sm-10">
+
+                                        <div class="checkbox">
+
+                                            <label>
+
+                                            <input type="checkbox"> Remember me
+
+                                            </label>
+
+                                        </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="form-group">
+
+                                        <div class="col-sm-offset-2 col-sm-10">
+
+                                        <button type="submit" class="btn btn-default">Sign in</button>
+
+                                        </div>
+
+                                    </div>
+
+                                    </form>
+
+                                </textarea><br>
+
+
+
+
+
+
+
+
+
+                <b>สืบค้นข้อมูลจาก :</b><a href=http://nokhookstudio.com/bootstrap-forms/>http://nokhookstudio.com/bootstrap-forms/</a>
+
+
+
+                </p>
+
+
+
+                <br><br>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <footer class="container-fluid">
+
+        <p align="center">จัดทำ โดยนายวารุณ ลาภศรีสวัสดิ์ 58160638</p>
+
+    </footer>
+
+</body>
+
+
+
+</html>
